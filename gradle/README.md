@@ -16,12 +16,9 @@ WARNING:
 
 # Supported tags and respective `Dockerfile` links
 
--	[`6.1.1-jdk8`, `6.1-jdk8`, `jdk8`, `6.1.1-jdk`, `6.1-jdk`, `jdk`, `6.1.1`, `6.1`, `latest`](https://github.com/keeganwitt/docker-gradle/blob/6596a2c43781107a48acd7520149bb153f10ea06/jdk8/Dockerfile)
--	[`6.1.1-jre8`, `6.1-jre8`, `jre8`, `6.1.1-jre`, `6.1-jre`, `jre`](https://github.com/keeganwitt/docker-gradle/blob/6596a2c43781107a48acd7520149bb153f10ea06/jre8/Dockerfile)
--	[`6.1.1-jdk11`, `6.1-jdk11`, `jdk11`](https://github.com/keeganwitt/docker-gradle/blob/6596a2c43781107a48acd7520149bb153f10ea06/jdk11/Dockerfile)
--	[`6.1.1-jre11`, `6.1-jre11`, `jre11`](https://github.com/keeganwitt/docker-gradle/blob/6596a2c43781107a48acd7520149bb153f10ea06/jre11/Dockerfile)
--	[`6.1.1-jdk13`, `6.1-jdk13`, `jdk13`](https://github.com/keeganwitt/docker-gradle/blob/6596a2c43781107a48acd7520149bb153f10ea06/jdk13/Dockerfile)
--	[`6.1.1-jre13`, `6.1-jre13`, `jre13`](https://github.com/keeganwitt/docker-gradle/blob/6596a2c43781107a48acd7520149bb153f10ea06/jre13/Dockerfile)
+**WARNING:** THIS IMAGE *IS NOT SUPPORTED* ON THE `arm32v6` ARCHITECTURE
+
+[![arm32v6/gradle build status badge](https://img.shields.io/jenkins/s/https/doi-janky.infosiftr.net/job/multiarch/job/arm32v6/job/gradle.svg?label=arm32v6/gradle%20%20build%20job)](https://doi-janky.infosiftr.net/job/multiarch/job/arm32v6/job/gradle/)
 
 # Quick reference
 
@@ -60,7 +57,7 @@ WARNING:
 
 Run this from the directory of the Gradle project you want to build.
 
-`docker run --rm -u gradle -v "$PWD":/home/gradle/project -w /home/gradle/project gradle gradle <gradle-task>`
+`docker run --rm -u gradle -v "$PWD":/home/gradle/project -w /home/gradle/project arm32v6/gradle gradle <gradle-task>`
 
 Note the above command runs using uid/gid 1000 (user *gradle*) to avoid running as root.
 
