@@ -21,6 +21,8 @@ WARNING:
 -	[`12`, `12.0`, `12-mysql-tomcat`, `12.0-mysql-tomcat`, `mysql-tomcat`, `stable-mysql-tomcat`, `stable-mysql`, `stable`, `latest`](https://github.com/xwiki-contrib/docker-xwiki/blob/135e858f6ed37d581f929b10a2f5d1ed83f759d4/12/mysql-tomcat/Dockerfile)
 -	[`12-postgres-tomcat`, `12.0-postgres-tomcat`, `postgres-tomcat`, `stable-postgres-tomcat`, `stable-postgres`](https://github.com/xwiki-contrib/docker-xwiki/blob/135e858f6ed37d581f929b10a2f5d1ed83f759d4/12/postgres-tomcat/Dockerfile)
 
+[![amd64/xwiki build status badge](https://img.shields.io/jenkins/s/https/doi-janky.infosiftr.net/job/multiarch/job/amd64/job/xwiki.svg?label=amd64/xwiki%20%20build%20job)](https://doi-janky.infosiftr.net/job/multiarch/job/amd64/job/xwiki/)
+
 # Quick reference
 
 -	**Where to get help**:  
