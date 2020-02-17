@@ -16,12 +16,11 @@ WARNING:
 
 # Supported tags and respective `Dockerfile` links
 
--	[`3.0.0-jdk8`, `3.0-jdk8`, `3.0.0-jdk`, `3.0-jdk`, `jdk8`, `jdk`](https://github.com/groovy/docker-groovy/blob/53ad8b1f1e17b59c9c928a61c642edae96ae344f/jdk8/Dockerfile)
--	[`3.0.0-jre8`, `3.0-jre8`, `3.0.0-jre`, `3.0-jre`, `3.0.0`, `3.0`, `jre8`, `jre`, `latest`](https://github.com/groovy/docker-groovy/blob/53ad8b1f1e17b59c9c928a61c642edae96ae344f/jre8/Dockerfile)
--	[`3.0.0-jdk11`, `3.0-jdk11`, `jdk11`](https://github.com/groovy/docker-groovy/blob/53ad8b1f1e17b59c9c928a61c642edae96ae344f/jdk11/Dockerfile)
 -	[`3.0.0-jre11`, `3.0-jre11`, `jre11`](https://github.com/groovy/docker-groovy/blob/53ad8b1f1e17b59c9c928a61c642edae96ae344f/jre11/Dockerfile)
 -	[`3.0.0-jdk13`, `3.0-jdk13`, `jdk13`](https://github.com/groovy/docker-groovy/blob/53ad8b1f1e17b59c9c928a61c642edae96ae344f/jdk13/Dockerfile)
 -	[`3.0.0-jre13`, `3.0-jre13`, `jre13`](https://github.com/groovy/docker-groovy/blob/53ad8b1f1e17b59c9c928a61c642edae96ae344f/jre13/Dockerfile)
+
+[![arm64v8/groovy build status badge](https://img.shields.io/jenkins/s/https/doi-janky.infosiftr.net/job/multiarch/job/arm64v8/job/groovy.svg?label=arm64v8/groovy%20%20build%20job)](https://doi-janky.infosiftr.net/job/multiarch/job/arm64v8/job/groovy/)
 
 # Quick reference
 
@@ -64,7 +63,7 @@ Note that if you are mounting a volume and the uid running Docker is not `1000`,
 
 ## Running a Groovy script
 
-`docker run --rm -v "$PWD":/home/groovy/scripts -w /home/groovy/scripts groovy groovy <script> <script-args>`
+`docker run --rm -v "$PWD":/home/groovy/scripts -w /home/groovy/scripts arm64v8/groovy groovy <script> <script-args>`
 
 ## Reusing the Grapes cache
 
@@ -72,7 +71,7 @@ The local Grapes cache can be reused across containers by creating a volume and 
 
 ```console
 docker volume create --name grapes-cache
-docker run --rm -it -v grapes-cache:/home/groovy/.groovy/grapes groovy
+docker run --rm -it -v grapes-cache:/home/groovy/.groovy/grapes arm64v8/groovy
 ```
 
 # License
